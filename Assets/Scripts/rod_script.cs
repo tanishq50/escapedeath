@@ -31,6 +31,7 @@ public class rod_script : MonoBehaviour
 
         if (Rod_Dist < 10)
         {
+            button_rod.enabled = true;
             button_rod.text = "Press E to Pick Rod ";
 
             Debug.Log("its working");
@@ -62,6 +63,11 @@ public class rod_script : MonoBehaviour
                     Destroy(Zombie, 3f);
                 }
             }
+        }
+            
+        if (Rod_Dist > 10)
+        {
+            button_rod.enabled = false;
         }
         
     }
